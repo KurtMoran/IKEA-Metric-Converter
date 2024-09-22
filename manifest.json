@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "IKEA Inches to CM Converter",
+  "version": "1.0",
+  "description": "Converts inch measurements to centimeters on the IKEA US website and displays a 3D box on hover.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.ikea.com/us/en/*"],
+      "js": ["three.min.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
